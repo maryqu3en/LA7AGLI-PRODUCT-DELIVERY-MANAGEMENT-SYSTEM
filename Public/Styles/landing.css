@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    color: #070707;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    flex: 1;
+    align-items: center;
+
+}
+
+.logo img {
+    height: 100%;
+    display: inline;
+}
+
+.nav-buttons {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-button {
+    background-color: #ff8800;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #ffaa00;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 30px;
+}
+
+.stat {
+    height: 200px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid orange;
+    border-radius: 30px;
+}
+
+.new-order-form {
+    height: 90vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.new-order-form input {
+    margin: 5px 0;
+    padding: 10px;
+    border: #ffaa00 1px solid;
+    border-radius: 7px;
+}
+
+#submit {
+    background-color: #070707;
+    color: orange;
+    border: #070707;
+    cursor: pointer;
+}
