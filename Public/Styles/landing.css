@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +22,8 @@ nav {
 .logo {
     flex: 1;
     align-items: center;
-
+    display: flex;
+    gap: 10%;
 }
 
 .logo img {
@@ -76,8 +77,18 @@ h2 {
     border-radius: 30px;
 }
 
+/* ------------------------------------------------------------------------------------------------- */
+
+form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 90vh;
+    width: 100vw;
+}
+
 .new-order-form {
-    height: 90vh;
+    flex: 1;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -89,6 +100,7 @@ h2 {
     padding: 10px;
     border: #ffaa00 1px solid;
     border-radius: 7px;
+    width: 100px;
 }
 
 #submit {
