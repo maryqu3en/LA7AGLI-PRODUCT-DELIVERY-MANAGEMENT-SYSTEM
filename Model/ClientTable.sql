@@ -10,3 +10,4 @@ CREATE TABLE client (
     PRIMARY KEY(Id_client),
     FOREIGN KEY(Id_user) REFERENCES user(Id_user)
 );
+
