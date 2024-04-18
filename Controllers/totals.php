@@ -1,6 +1,5 @@
 <?php
 include 'connexion.php';
-session_start();
 
 // total quantity
 $sql = "SELECT SUM(quantite) AS total FROM commande WHERE Id_user = " . $_SESSION['logged_user']['Id_user']; 

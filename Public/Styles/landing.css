@@ -1,19 +1,35 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../fonts/SF-Pro/SFPRODISPLAYREGULAR.OTF') format('OpenType');
+}
+
+:root {
+    --background-grey: #f5f5f3;
+    --logo-blue: #497cbe;
+    --green: #a2cc50;
+    --button-blue: #4269b4;
+    --orange: #ff8800;
+    --primary-dark: #497cbe;
+    --secondary-lighter: #6ac7f2;
+
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'SF Pro', sans-serif;
+    font-size: large;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
+/* ------------------------------------------------------------------------------------------------- */
 
 nav {
     display: flex;
     justify-content: space-around;
     background-color: #ffffff;
     color: #070707;
-    padding: 5px;
+    padding: 7px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 60px;
     margin-bottom: 20px;
@@ -24,6 +40,7 @@ nav {
     align-items: center;
     display: flex;
     gap: 10%;
+    letter-spacing: 1rem;
 }
 
 .logo img {
@@ -38,7 +55,7 @@ nav {
 }
 
 .nav-button {
-    background-color: #ff8800;
+    background-color: var(--primary-dark);
     color: #fff;
     padding: 10px;
     text-decoration: none;
@@ -47,12 +64,14 @@ nav {
 }
 
 .nav-button:hover {
-    background-color: #ffaa00;
+    background-color: var(--secondary-lighter);
 }
 
 a {
     text-decoration: none;
 }
+
+/* ------------------------------------------------------------------------------------------------- */
 
 .main {
     padding: 20px;
@@ -60,52 +79,83 @@ a {
 
 h2 {
     text-align: center;
+    font-size: 30px;
 }
 
 .stats {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
     padding: 30px;
 }
 
 .stat {
     height: 200px;
-    padding: 10px;
+    padding: 15%;
     margin: 5px;
-    border: 1px solid orange;
+    border: 3px solid var(--primary-dark);
     border-radius: 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.3s;
+}
+
+.stat:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 3px solid var(--orange);
+
+}
+
+.stat h3 {
+    text-align: center;
+}
+
+.stat p {
+    text-align: center;
+    font-size: 4vw;
+    margin: 20px;
+
+}
+
+#price-all p:after, #price-day p:after{
+    content: 'DZD';
+    font-size: 2vw;
+    
+}
+
+#count-all p:after, #count-day p:after{
+    content: 'Orders';
+    font-size: 2vw;
+}
+
+#total-all p:after, #total-day p:after{
+    content: 'Products';
+    font-size: 2vw;
 }
 
 /* ------------------------------------------------------------------------------------------------- */
 
-form {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 90vh;
-    width: 100vw;
-}
-
-.new-order-form {
-    flex: 1;
+#new-order-form {
+    height: 90vh;
+    width: 98vw;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center;
 }
 
-.new-order-form input {
+#new-order-form input, select {
+    width: 90%;
     margin: 5px 0;
     padding: 10px;
-    border: #ffaa00 1px solid;
+    border: var(--primary-dark) 2px solid;
     border-radius: 7px;
-    width: 100px;
 }
 
 #submit {
-    background-color: #070707;
-    color: orange;
+    background-color: white;
+    color: var(--primary-dark);
     border: #070707;
     cursor: pointer;
 }
