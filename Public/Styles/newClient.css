@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "SF Pro";
+    src: url("../fonts/SF-Pro/SFPRODISPLAYREGULAR.OTF") format("OpenType");
+}
+
+:root {
+    --background-grey: #f5f5f3;
+    --logo-blue: #497cbe;
+    --green: #a2cc50;
+    --button-blue: #4269b4;
+    --orange: #ff8800;
+    --light-orange: #ffbb33;
+    /* --primary-dark: #497cbe;
+          --secondary-lighter: #6ac7f2; */
+    --primary-dark: var(--orange);
+    --secondary-lighter: var(--light-orange);
+
+    --text-color: #030036;
+
+    --font-family: "SF Pro", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-size: large;
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary-dark);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #ede9f0;
+  }
+
+/* ------------------------------------------------------------------------------------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    color: #070707;
+    padding: 7px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.logo {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    gap: 10%;
+    letter-spacing: 1rem;
+}
+
+.logo img {
+    height: 100%;
+    display: inline;
+}
+
+.product-info {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-buttons {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+a {
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--orange);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s ease;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:hover .button::after {
+    transform: scaleX(1);
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px #e3d6b8;
+}
+
+form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    background-image: linear-gradient(to right,
+            var(--green),
+            var(--orange),
+            var(--orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-lighter);
+}
+
+button:active {
+    transform: scale(0.9);
+    opacity: 0.6;
+}
