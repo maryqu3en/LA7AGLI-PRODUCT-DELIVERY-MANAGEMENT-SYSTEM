@@ -8,7 +8,7 @@ $date = date('Y-m-d');
 
 $sql = "INSERT INTO commande (Id_user, Id_client, quantite, date_commande) VALUES ('$user_id', '$client_id', '$quantity', '$date')";
 if ($conn->query($sql) === TRUE) {
-    header('Location: ../Views/landing.php');
+    header('Location: ../Views/home.php');
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

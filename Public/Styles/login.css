@@ -11,18 +11,22 @@
   --orange: #ff8800;
   --light-orange: #ffbb33;
   /* --primary-dark: #497cbe;
-    --secondary-lighter: #6ac7f2; */
+      --secondary-lighter: #6ac7f2; */
   --primary-dark: var(--orange);
   --secondary-lighter: var(--light-orange);
 
   --text-color: #030036;
+
+
+  --font-family: "SF Pro", sans-serif;
+
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "SF Pro", sans-serif;
+  font-family: var(--font-family);
   font-size: large;
   color: var(--text-color);
 }
@@ -63,7 +67,7 @@ nav {
 /* ------------------------------------------------------------------------------------------------- */
 
 a {
-    text-decoration: none;
+  text-decoration: none;
   border: none;
   border-radius: 5px;
   padding: 15px;
@@ -93,31 +97,19 @@ a:hover .button::after {
 
 /* ------------------------------------------------------------------------------------------------- */
 
-body {
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--background-grey);
+form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 3px #e3d6b8;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  flex-direction: row;
-  padding: 40px;
-}
-
-h2 {
-  font-size: 5rem;
-  margin-top: -100px;
-  margin-bottom: 50px;
-  line-height: 1.5;
-  text-align: center;
-  background-image: linear-gradient(
+form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    background-image: linear-gradient(
     to right,
     var(--green),
     var(--orange),
@@ -127,14 +119,40 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-p {
-  font-size: 2rem;
+form p {
   text-align: center;
 }
 
-span {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--primary-dark);
+form a {
+    color: purple;
+    text-decoration: underline;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--primary-dark);
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-dark);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-lighter);
 }
 

@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../fonts/SF-Pro/SFPRODISPLAYREGULAR.OTF') format('OpenType');
+}
+
+:root {
+    --background-grey: #f5f5f3;
+    --logo-blue: #497cbe;
+    --green: #a2cc50;
+    --button-blue: #4269b4;
+    --orange: #ff8800;
+    --primary-dark: #497cbe;
+    --secondary-lighter: #6ac7f2;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro', sans-serif;
+    font-size: large;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    color: #070707;
+    padding: 7px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    gap: 10%;
+    letter-spacing: 1rem;
+}
+
+.logo img {
+    height: 100%;
+    display: inline;
+}
+
+.product-info {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-buttons {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-button {
+    background-color: var(--primary-dark);
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: var(--secondary-lighter);
+}
+
+a {
+    text-decoration: none;
+}

@@ -4,16 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../public/styles/main.css'>
     <title>Edit client information</title>
 </head>
 
 <body>
-    <?php 
+    <nav>
+        <div class="logo">
+            <img src="../Public/Images/logo_blue.png" alt="logo" />
+            <h1>LA7AGLI</h1>
+        </div>
+        <div class="nav-buttons">
+            <a href="#new-order-form">
+                <div class="nav-button">New Order</div>
+            </a>
+            <a href="./newClient.php">
+                <div class="nav-button">New Client</div>
+            </a>
+            <a href="./allClients.php">
+                <div class="nav-button">All Clients</div>
+            </a>
+            <a href="./allOrders.php">
+                <div class="nav-button">All Orders</div>
+            </a>
+            <a href="./login.php">
+                <div class="nav-button" id="log-out">Log Out</div>
+            </a>
+        </div>
+    </nav>
+    <?php
     include '../controllers/connexion.php';
-    $id = $_POST['edit'];
-    $sql = "SELECT * FROM client WHERE Id_client = " . $id; 
+    $id = $_POST["edit"];
+    $sql = "SELECT * FROM client WHERE Id_client = " . $id;
     $query = $conn->query($sql);
-    $row= $query->fetch_assoc();
+    $row = $query->fetch_assoc();
     ?>
 
     <form method='post' action='../controllers/updateClient.php'>
