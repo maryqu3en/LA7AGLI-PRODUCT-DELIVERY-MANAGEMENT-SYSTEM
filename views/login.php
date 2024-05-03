@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/styles/login.css">
     <link rel="shortcut icon" href="../Public/Images/logo-icon.png" type="image/x-icon" />
-    <title>LA7AGLI</title>
+    <title>Login - LA7AGLI</title>
 </head>
 
 <body>
@@ -28,11 +28,11 @@
         <form action="../controllers/login.php" method="post">
             <h1>Login</h1>
             <label for="nom">First name:</label>
-            <input type="text" id="nom" name="nom"><br>
+            <input type="text" id="nom" name="nom" required>
             <label for="prenom">Family name:</label>
-            <input type="text" id="prenom" name="prenom"><br>
+            <input type="text" id="prenom" name="prenom" required>
             <label for="psw">Password:</label>
-            <input type="password" id="psw" name="password"><br>
+            <input type="password" id="psw" name="password" required>
             <button>Login</button>
             <p>Dont have an account?<a href="signup.php">Sign up</a></p>
         </form>

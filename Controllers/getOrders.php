@@ -32,14 +32,14 @@ if ($result->num_rows > 0) {
                 <td>".$row["date_commande"]."</td>
                 <td>".$row["quantite"]."</td>
                 <td>".$row["quantite"] * $_SESSION['logged_user']['prix']."</td>
-                <td> 
-                    <form method='post' action='../controllers/deleteOrder.php'>
-                        <button type='submit' name='delete' value='".$row["Id_commande"]."'>Delete</button>
-                    </form>
-                </td>
                 <td>
                     <form method='post' action='../views/editOrder.php'>
                         <button type='submit' name='edit' value='".$row["Id_commande"]."'>Edit</button>
+                    </form>
+                </td>
+                <td> 
+                    <form method='post' action='../controllers/deleteOrder.php'>
+                        <button type='submit' name='delete' value='".$row["Id_commande"]."'>Delete</button>
                     </form>
                 </td>
               </tr>";

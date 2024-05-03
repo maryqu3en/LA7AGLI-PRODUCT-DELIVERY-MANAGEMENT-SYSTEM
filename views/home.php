@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../public/styles/home.css" />
   <link rel="shortcut icon" href="../Public/Images/logo-icon.png" type="image/x-icon" />
-  <title>Landing Page - LA7AGLI</title>
+  <title>Home - LA7AGLI</title>
 </head>
 
 <body>
@@ -90,7 +90,7 @@
         </select>
       
         <label for="quantity">Quantity:</label>
-        <input type="number" name="quantity" id="quantity" min="1" />
+        <input type="number" name="quantity" id="quantity" min="1" value="1"/>
       
         <input type="submit" id="submit" value="Add Order" />
       </form>

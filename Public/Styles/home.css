@@ -29,6 +29,19 @@
   color: var(--text-color);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-dark);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ede9f0;
+}
+
 /* ------------------------------------------------------------------------------------------------- */
 
 nav {
@@ -108,7 +121,7 @@ main {
 
 h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 3em;
 }
 
 .stats {
@@ -136,6 +149,7 @@ h2 {
 
 .stat h3 {
   text-align: center;
+  font-size: 1.5em;
 }
 
 .stat p {
@@ -179,7 +193,7 @@ select {
   width: 90%;
   margin: 5px 0;
   padding: 10px;
-  border: var(--primary-dark) 2px solid;
+  border: var(--primary-dark) 2.5px solid;
   border-radius: 7px;
 }
 
@@ -188,6 +202,25 @@ select {
   color: var(--primary-dark);
   border: #070707;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#submit:hover {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+#submit:active {
+  transform: scale(0.9);
+  opacity: 0.6;
+}
+
+#new-order-form label {
+  font-size: 1.5em;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
 }
 
 /* ------------------------------------------------------------------------------------------------- */

@@ -31,6 +31,19 @@
   color: var(--text-color);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-dark);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ede9f0;
+}
+
 /* ------------------------------------------------------------------------------------------------- */
 
 nav {
@@ -131,6 +144,7 @@ form a {
 label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 input {
@@ -156,3 +170,7 @@ button:hover {
   background-color: var(--secondary-lighter);
 }
 
+button:active {
+  transform: scale(0.9);
+  opacity: 0.6;
+}
