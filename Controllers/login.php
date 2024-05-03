@@ -10,7 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $q = $conn->query($sql);
     $user = $q->fetch_assoc();
     if (!$user) {
-        echo ("erreur");
+        echo ("<p style='text-align: center; font-size: 2em;'>Cannot find user. Enter valid user information.</p>");
+        echo '<meta http-equiv="refresh" content="2; url=../views/login.php" />';
     } else {
         $_SESSION['logged_user'] = $user;
         header("Location: ../views/home.php");
