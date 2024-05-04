@@ -7,13 +7,13 @@ LA7AGLI is a product delivery management system that helps you manage your produ
 - Add a new delivery to the system.
 - View all clients in the system.
 - View all deliveries in the system.
-- View all deliveries made by a specific client.
 - Search for a specific client by their first name or last name.
 - Search for deliveries based on the delivery date.
 - Update a client's information.
 - Update a delivery's information.
 - Delete a client from the system.
 - Delete a delivery from the system.
+- Display statistics of orders daily and of all time.
 
 ## Technologies used:
 - HTML/CSS for frontend development.
