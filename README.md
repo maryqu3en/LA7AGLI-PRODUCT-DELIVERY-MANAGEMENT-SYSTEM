@@ -1,7 +1,9 @@
 # LA7AGLI - Product Delivery Management System
+
 LA7AGLI is a product delivery management system that helps you manage your product deliveries and clients. It is a web application that allows you to add, edit, and delete clients and deliveries. You can also view the list of deliveries and clients, and search for specific clients by name and for deliveries by date. The system is designed to be user-friendly and easy to use, with a simple and intuitive interface.
 
 ## Features:
+
 - User registration and login.
 - Add a new client to the system.
 - Add a new delivery to the system.
@@ -16,20 +18,25 @@ LA7AGLI is a product delivery management system that helps you manage your produ
 - Display statistics of orders daily and of all time.
 
 ## Technologies used:
+
 - HTML/CSS for frontend development.
 - PHP for backend development.
 - MySQL database for data storage.
 
 ## Database schema:
+
 The database `Livraison` schema consists of the following tables:
+
 1. `user` table that stores user information such as username, password, and email.
-2. `client` table that stores client information such as first name, last name, address, and phone number. It has a foreign key relationship with the `users` table.
+2. `client` table that stores client information such as first name, last name, address, and phone number. It has a foreign key relationship with the `user` table.
 3. `commande` table that stores delivery information such as delivery date, client name, quantity, price, and total price. It has a foreign key relationship with the `client` table and the `user` table.
 
 ![Database Entity Diagram](./assets/bd-entity-diagram.png)
 
 ## Project overview
+
 The project is divided into the following directories:
+
 ```
 assets
 controllers
@@ -41,22 +48,29 @@ public
 |_ styles
 views
 ```
+
 Inside each directory there are corresponding files that contain the code for the project. The entry point is located at `landing.php` in the `views` directory.
 
 ## Installation instructions:
+
 To run this application locally you will need to have a web server installed on your machine. You can use XAMPP, WAMP, or any other web server that supports PHP and MySQL. Follow the steps below to install the application:
+
 1. Clone the repository to your local machine by running the following command in your terminal:
+
 ```bash
 git clone https://github.com/yassine-irab/livraison.git
 ```
+
 2. Navigate to the cloned repository and copy the contents to the web server's root directory in a folder called `LA7AGLI`.
 3. Create a new MySQL database called "Livraison" and import the `.sql` files located in the `model` directory. For example, if you are using Apache, navigate to `http://localhost/phpmyadmin` and create a new database called "Livraison". Then import the `.sql` files by clicking on the "Import" tab and selecting the files.
 4. Update the database connection details in the `controllers/connexion.php` file with your database credentials.
 5. Open your web browser and navigate to `http://localhost/LA7AGLI/views/landing.php` to access the application.
 
 ## Usage instructions:
+
 To use this application you will need to have a user account. You can create a new account by clicking on the "Register" link on the login page. Once you have created an account, you can log in and start using the application. You can add new clients and deliveries, view the list of clients and deliveries, search for specific clients and deliveries, update client and delivery information, and delete clients and deliveries. You can also view the statistics of orders daily and of all time.
 
 ## Contributors:
+
 - [Meriem SOUBIH](https://www.linkedin.com/in/meriem-soubih-864390254/)
 - [Nour El Houda ZELLAL](https://www.linkedin.com/in/nourelhouda-zellal-3b05a82b1/)
