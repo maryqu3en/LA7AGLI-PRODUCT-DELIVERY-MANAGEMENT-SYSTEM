@@ -28,3 +28,35 @@ The database `Livraison` schema consists of the following tables:
 
 ![Database Entity Diagram](./assets/bd-entity-diagram.png)
 
+## Project overview
+The project is divided into the following directories:
+```
+assets
+controllers
+model
+public
+|_ fonts
+|  |_ SF-PRO
+|_ images
+|_ styles
+views
+```
+Inside each directory there are corresponding files that contain the code for the project. The entry point is located at `landing.php` in the `views` directory.
+
+## Installation instructions:
+To run this application locally you will need to have a web server installed on your machine. You can use XAMPP, WAMP, or any other web server that supports PHP and MySQL. Follow the steps below to install the application:
+1. Clone the repository to your local machine by running the following command in your terminal:
+```bash
+git clone https://github.com/yassine-irab/livraison.git
+```
+2. Navigate to the cloned repository and copy the contents to the web server's root directory in a folder called `LA7AGLI`.
+3. Create a new MySQL database called "Livraison" and import the `.sql` files located in the `model` directory. For example, if you are using Apache, navigate to `http://localhost/phpmyadmin` and create a new database called "Livraison". Then import the `.sql` files by clicking on the "Import" tab and selecting the files.
+4. Update the database connection details in the `controllers/connexion.php` file with your database credentials.
+5. Open your web browser and navigate to `http://localhost/LA7AGLI/views/landing.php` to access the application.
+
+## Usage instructions:
+To use this application you will need to have a user account. You can create a new account by clicking on the "Register" link on the login page. Once you have created an account, you can log in and start using the application. You can add new clients and deliveries, view the list of clients and deliveries, search for specific clients and deliveries, update client and delivery information, and delete clients and deliveries. You can also view the statistics of orders daily and of all time.
+
+## Contributors:
+- [Meriem SOUBIH](https://www.linkedin.com/in/meriem-soubih-864390254/)
+- [Nour El Houda ZELLAL](https://www.linkedin.com/in/nourelhouda-zellal-3b05a82b1/)
