@@ -58,7 +58,7 @@ To run this application locally you will need to have a web server installed on 
 1. Clone the repository to your local machine by running the following command in your terminal:
 
 ```bash
-git clone https://github.com/yassine-irab/livraison.git
+git clone https://github.com/maryqu3en/LA7AGLI-PRODUCT-DELIVERY-MANAGEMENT-SYSTEM.git
 ```
 
 2. Navigate to the cloned repository and copy the contents to the web server's root directory in a folder called `LA7AGLI`.
